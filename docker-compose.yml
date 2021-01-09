@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:9000"
+    volumes:
+      - .:/word_frequency
+    ports:
+      - "9000:9000"
