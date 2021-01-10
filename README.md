@@ -8,10 +8,9 @@ word and a list of the most frequent words.
 
 * Framework: ``Django``
 
-## installation (via virtual env)
+## installation (via virtual env. If you want to use docker, please skip this step)
 
 ```
-
 $ virtualenv .venv
 
 $ source .venv/bin/activate
