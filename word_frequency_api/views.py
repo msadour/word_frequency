@@ -1,6 +1,8 @@
 """Views."""
+from typing import Any
 
 from rest_framework import status
+from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
@@ -10,7 +12,7 @@ from word_frequency_api.word_frequency import WordFrequency
 class WordFrequencyView(APIView):
     """Class WordFrequencyView."""
 
-    def get(self, request, *args, **kwargs):
+    def get(self, request: Request, *args: Any, **kwargs: Any) -> Response:
         """Return the result from the user's request regarding the actions..
 
         Args:

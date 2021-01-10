@@ -10,7 +10,7 @@ class TestAPI(APITestCase):
         """Set up attributes for tests."""
         self.client = APIClient()
 
-    def test_calculate_highest_frequency(self):
+    def test_calculate_highest_frequency(self) -> None:
         """Test calculate highest frequency.
 
         Raises:
@@ -26,7 +26,7 @@ class TestAPI(APITestCase):
         assert response_word_the_three_time.data == [("the", 3)]
         assert response_word_sky_moon_two_time.data == [("sky", 2), ("moon", 2)]
 
-    def test_calculate_frequency_for_word(self):
+    def test_calculate_frequency_for_word(self) -> None:
         """Test calculate frequency for word.
 
         Raises:
@@ -42,7 +42,7 @@ class TestAPI(APITestCase):
         assert response_word_the.data == 2
         assert response_word_lake.data == 1
 
-    def test_calculate_most_frequent_words(self):
+    def test_calculate_most_frequent_words(self) -> None:
         """Test calculate more frequent word.
 
         Raises:
@@ -54,7 +54,7 @@ class TestAPI(APITestCase):
         assert response.data[0] == ("the", 2)
         assert response.data[1] == ("fish", 1)
 
-    def test_wrong_request(self):
+    def test_wrong_request(self) -> None:
         """Test wrong action.
 
         Raises:
